@@ -15,10 +15,10 @@ class CreateInvestmentsTable extends Migration
     {
         Schema::create('investments', function (Blueprint $table) {
 
-            $table->bigIncrements('id');
-            $table->bigInteger('user_id');
-            $table->bigInteger('category_investment_id');
-            $table->bigInteger('type_investment_id');
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->integer('category_investment_id')->unsigned();
+            $table->integer('type_investment_id')->unsigned();
 
             $table->date('initial_date');
             $table->date('final_date');

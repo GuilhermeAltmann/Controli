@@ -14,7 +14,7 @@ class CreateTypesInvestmentTable extends Migration
     public function up()
     {
         Schema::create('types_investment', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('type', 60);
             $table->timestamps();
         });

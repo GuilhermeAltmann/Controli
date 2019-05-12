@@ -15,8 +15,8 @@ class CreateBudgetsTable extends Migration
     {
         Schema::create('budgets', function (Blueprint $table) {
 
-            $table->bigIncrements('id');
-            $table->bigInteger('category_id');
+            $table->increments('id');
+            $table->integer('category_id')->unsigned();
             $table->decimal('amount', 8, 2);
             $table->decimal('alert_percent', 5, 2);
             
